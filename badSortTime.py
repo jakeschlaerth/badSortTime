@@ -5,7 +5,7 @@ import math
 import random
 import time
 
-while True:
+while True:  # driver code for alpha user input
     try:
         alpha = float(input("Please input desired alpha parameter such that 0 < alpha < 1 :  "))
     except ValueError:
@@ -48,7 +48,7 @@ def badSort(arr, left, right):
         badSort(arr, (right - m + 1), right)
         badSort(arr, left, (left + m - 1))
 
-
+# driver code for random arrays
 for i in range(100, 1000, 100):
     random_list = randList(i)
     print("array of length", i, "sorted in ", end="")
