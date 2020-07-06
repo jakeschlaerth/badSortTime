@@ -48,15 +48,44 @@ def badSort(arr, left, right):
         badSort(arr, (right - m + 1), right)
         badSort(arr, left, (left + m - 1))
 
+
 # driver code for random arrays
-for i in range(100, 1000, 100):
-    random_list = randList(i)
-    print("array of length", i, "sorted in ", end="")
-    start_time = time.perf_counter()
-    badSort(random_list, 0, i-1)
-    end_time = time.perf_counter()
-    run_time = end_time - start_time
-    print(run_time, end="")
-    print(" seconds via badSort with an alpha parameter of ", end="")
-    print(alpha)
+if alpha == .66:
+    for i in range(100, 900, 100):
+        random_list = randList(i)
+        print("array of length", i, "sorted in ", end="")
+        start_time = time.perf_counter()
+        badSort(random_list, 0, i - 1)
+        end_time = time.perf_counter()
+        run_time = end_time - start_time
+        print(run_time, end="")
+        print(" seconds via badSort with an alpha parameter of ", end="")
+        print(alpha)
+
+elif alpha == .75:
+    for i in range(25, 201, 25):
+        random_list = randList(i)
+        print("array of length", i, "sorted in ", end="")
+        start_time = time.perf_counter()
+        badSort(random_list, 0, i-1)
+        end_time = time.perf_counter()
+        run_time = end_time - start_time
+        print(run_time, end="")
+        print(" seconds via badSort with an alpha parameter of ", end="")
+        print(alpha)
+
+else:
+    for i in range(10, 50, 10):
+        random_list = randList(i)
+        print("array of length", i, "sorted in ", end="")
+        start_time = time.perf_counter()
+        badSort(random_list, 0, i-1)
+        end_time = time.perf_counter()
+        run_time = end_time - start_time
+        print(run_time, end="")
+        print(" seconds via badSort with an alpha parameter of ", end="")
+        print(alpha)
+
+
+
 
